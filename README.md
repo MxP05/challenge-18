@@ -36,8 +36,8 @@ allows partner-banks to conduct financial transactions (that is, to transfer mon
 
 
 *Verified blocks, and Validated chain*
-![SVM](https://github.com/MxP05/Challenge-14/blob/main/Resources/svm.png?raw=true)
-![LR](https://github.com/MxP05/Challenge-14/blob/main/Resources/lrplot.png?raw=true)
+![Verify](https://github.com/MxP05/challenge-18/blob/main/verify.png?raw=true)
+![Validate](https://github.com/MxP05/challenge-18/blob/main/validate.png?raw=true)
 ---
 ## Summary evaluation
 verify and validated ledger see images.
