@@ -29,7 +29,6 @@ from typing import Any, List
 import datetime as datetime
 import pandas as pd
 import hashlib
-
 ################################################################################
 # Step 1:
 # Create a Record Data Class
@@ -45,7 +44,7 @@ import hashlib
 # 5. Add an attribute named `amount` of type `float`.
 # Note that you’ll use this new `Record` class as the data type of your `record` attribute in the next section.
 
-
+"""created dataclass decorator, and class Record, with 3 attributes sender receiver amount."""
 # @TODO
 # Create a Record Data Class that consists of the `sender`, `receiver`, and
 # `amount` attributes
@@ -69,7 +68,7 @@ class Record:
 
 @dataclass
 class Block:
-
+    """renamed attribute to record, and set the data type to Record"""
     # @TODO
     # Rename the `data` attribute to `record`, and set the data type to `Record`
     record: Record
@@ -144,7 +143,7 @@ class PyChain:
 # Streamlit Code
 
 # Adds the cache decorator for Streamlit
-
+"""Changed cache to cache_resource, due to depreciation"""
 
 @st.cache_resource()
 def setup():
@@ -170,7 +169,7 @@ pychain = setup()
 # 3. Add an input area where you can get a value for `receiver` from the user.
 # 4. Add an input area where you can get a value for `amount` from the user.
 # 5. As part of the Add Block button functionality, update `new_block` so that `Block` consists of an attribute named `record`, which is set equal to a `Record` that contains the `sender`, `receiver`, and `amount` values. The updated `Block`should also include the attributes for `creator_id` and `prev_hash`.
-
+"""edited inputs sender_id, receiver_id, amount_sum, created text input in streamlit"""
 # @TODO:
 # Delete the `input_data` variable from the Streamlit interface.
 sender_id = st.text_input("Sender ID")
@@ -196,6 +195,7 @@ if st.button("Add Block"):
     # Update `new_block` so that `Block` consists of an attribute named `record`
     # which is set equal to a `Record` that contains the `sender`, `receiver`,
     # and `amount` values
+    """added the input attributes"""
     new_block = Block(
         record=Record(sender_id,receiver_id,amount_sum),creator_id=42, prev_hash=prev_block_hash
     )
